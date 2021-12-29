@@ -1,0 +1,342 @@
+
+
+<GridLayoutExplGUI>
+	rows: 3
+	
+	BoxLayoutExplGUI:
+	BoxLayoutExplGUI:
+	BoxLayoutExplGUI:
+
+	BoxLayoutExplGUI:
+	BoxLayoutExplGUI:
+	BoxLayoutExplGUI:
+
+	AnchorLayoutExplGUI:
+	AnchorLayoutExplGUI:
+	AnchorLayoutExplGUI:
+
+								
+<BoxLayoutExplGUI>
+	orientation: 'vertical'
+	
+	padding: 5
+	spacing: 5
+
+	canvas.before:
+		Color:
+			rgb: [0.22,0.22,0.22]
+		Rectangle:
+			pos: self.pos
+	
+	Button:
+		text: 'A'
+		size_hint: (.5, .5)
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Button:
+		text: 'B'
+		size_hint: (.7, 1)
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Label:
+		id: label_1
+		text: 'label 1'
+		size_hint: (1, 2)
+
+<AnchorLayoutExplGUI>
+	label1: label_1
+	label2: label_2
+	label3: label_3
+
+	label4: label_4
+	label5: label_5
+	label6: label_6
+	
+	label7: label_7
+	label8: label_8
+	label9: label_9
+
+	rows: 3
+	#cols: 3 # not necessary !
+	
+	padding: 5
+	spacing: 5
+
+	canvas.before:
+		Color:
+			rgb: [0.22,0.22,0.22]
+		Rectangle:
+			pos: self.pos
+	AnchorLayout:			
+		anchor_x: 'left'
+		anchor_y: 'top'
+		canvas:
+			Color:
+				rgb: [.5, .324, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_1')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_1')
+			Label:
+				id: label_1
+				canvas.before: 
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 1'
+				size_hint: (1, 0.7)
+	AnchorLayout:			
+		anchor_x: 'center'
+		anchor_y: 'top'
+		canvas:
+			Color:
+				rgb: [.4, .324, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_2')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_2')
+			Label:
+				id: label_2
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 2'
+				size_hint: (1, 0.7)
+	AnchorLayout:			
+		anchor_x: 'right'
+		anchor_y: 'top'
+		canvas:
+			Color:
+				rgb: [.3, .324, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_3')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_3')
+			Label:
+				id: label_3
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 3'
+				size_hint: (1, 0.7)
+
+	AnchorLayout:			
+		anchor_x: 'left'
+		anchor_y: 'center'
+		canvas:
+			Color:
+				rgb: [.5, .424, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_4')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_4')
+			Label:
+				id: label_4
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 4'
+				size_hint: (1, 0.7)
+	AnchorLayout:			
+		anchor_x: 'center'
+		anchor_y: 'center'
+		canvas:
+			Color:
+				rgb: [.4, .524, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_5')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_5')
+			Label:
+				id: label_5
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 5'
+				size_hint: (1, 0.7)
+	AnchorLayout:			
+		anchor_x: 'right'
+		anchor_y: 'center'
+		canvas:
+			Color:
+				rgb: [.3, .624, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_6')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_6')
+			Label:
+				id: label_6
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 6'
+				size_hint: (1, 0.7)
+
+	AnchorLayout:			
+		anchor_x: 'left'
+		anchor_y: 'bottom'
+		canvas:
+			Color:
+				rgb: [.5, .324, .484]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_7')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_7')
+			Label:
+				id: label_7
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 7'
+				size_hint: (1, 0.7)
+	AnchorLayout:			
+		anchor_x: 'center'
+		anchor_y: 'bottom'
+		canvas:
+			Color:
+				rgb: [.4, .324, .584]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_8')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_8')
+			Label:
+				id: label_8
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 8'
+				size_hint: (1, 0.7)
+	AnchorLayout:			
+		anchor_x: 'right'
+		anchor_y: 'bottom'
+		canvas:
+			Color:
+				rgb: [.3, .324, .684]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			size_hint: (0.5, 0.6)
+			orientation: 'vertical'
+			Button:
+				text: 'A'
+				size_hint: (1, .5)
+				on_press: root.setToLabel(self.text, 'labeL_9')
+			Button:
+				text: 'B'
+				size_hint: (1, 1)
+				on_press: root.setToLabel(self.text, 'labeL_9')
+			Label:
+				id: label_9
+				canvas.before:
+					Color:
+						rgb: [0.22, 0.22, 0.22]
+					Rectangle:
+						size: self.size
+						pos: self.pos
+				text: 'label 9'
+				size_hint: (1, 0.7)
+					
