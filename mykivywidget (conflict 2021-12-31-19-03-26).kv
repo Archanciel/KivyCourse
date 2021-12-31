@@ -21,19 +21,21 @@
 		cols: 3
 		Switch:
 			id: my_switch
-			active: root.switchActive 
-			on_active: root.handleSwitch(self)
+			#active: root.switchActive 
+			active: False
+			#on_active: root.handleSwitch(self)
 			
 		Slider:
+			id: my_slider
 			orientation: 'vertical'
 			min: '0'
 			max: '100'
-			on_value: root.handleSlider(self)
+			#on_value: root.handleSlider(self)
 			#disabled: root.sliderDisabled
 			disabled: not my_switch.active
 			
 		Label:
-			text: root.sliderLabelTxt
+			text: str(int(my_slider.value))
 			font_name: 'fonts/Lcd.ttf'
 			font_size: '50dp'
 			color: 1, 0.5, 1, 1

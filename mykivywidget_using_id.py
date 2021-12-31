@@ -7,7 +7,7 @@ class MyGridLayout(GridLayout):
 	labelTxt = StringProperty('0')
 	clickDisabled = BooleanProperty(True)
 	#switchActive = BooleanProperty(False)
-	sliderLabelTxt = StringProperty('0')
+	#sliderLabelTxt = StringProperty('0')
 	#sliderDisabled = BooleanProperty(True)
 	
 	def __init__(self, **kvarg):
@@ -34,9 +34,9 @@ class MyGridLayout(GridLayout):
 #	def handleSlider(self, widget):
 #		self.sliderLabelTxt = str(int(widget.value))
 	
-class MyKivyWidgetApp(App):
+class MyKivyWidget_using_idApp(App):
 	def build(self):
 		return MyGridLayout()
 
 if __name__ == '__main__':
-	MyKivyWidgetApp().run()
+	MyKivyWidget_using_idApp().run()

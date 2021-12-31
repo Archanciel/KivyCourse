@@ -1,0 +1,68 @@
+<MyGridLayout>
+	rows: 2
+
+	GridLayout:
+		padding: 5
+		spacing: 5
+
+		canvas:
+			Color:
+				rgb: [.3, .424, .384]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		
+		cols: 3
+		ToggleButton:
+			text: 'Off'
+			on_state: root.handleToggle(self)
+			size_hint: None, 1
+			size_x: '100dp'
+		Button:
+			text: 'Click here'
+			on_press: root.handleClick()
+			disabled: root.clickDisabled
+			
+		Label:
+			text: root.labelTxt
+			font_name: 'fonts/Lcd.ttf'
+			font_size: '80dp'
+			color: 1, 0.5, 1, 1
+	GridLayout:
+		padding: 50
+		spacing: 5
+
+		canvas:
+			Color:
+				rgb: [.2, .224, .284]
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		
+		cols: 3
+		Switch:
+			id: my_switch
+			#active: root.switchActive 
+			active: False
+			#on_active: root.handleSwitch(self)
+			
+		Slider:
+			id: my_slider
+			orientation: 'vertical'
+			min: '0'
+			max: '100'
+			#on_value: root.handleSlider(self)
+			#disabled: root.sliderDisabled
+			disabled: not my_switch.active
+		BoxLayout:
+			orientation: 'vertical'	
+			Label:
+				text: str(int(my_slider.value))
+				font_name: 'fonts/Lcd.ttf'
+				font_size: '50dp'
+				color: 1, 0.5, 1, 1
+			ProgressBar:
+				max: 100
+				value: my_slider.value
+				
+	
