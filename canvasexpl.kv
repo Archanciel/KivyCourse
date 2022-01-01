@@ -1,0 +1,27 @@
+#: set s dp(200)
+
+#CanvasExpl2:
+
+<CanvasExpl1>:
+	canvas:
+		Color:
+			rgb: [.3, .424, .384]
+		Rectangle:
+			pos: 200, 500
+			size: dp(100), dp(100)
+		Color:
+			rgb: [.4, .424, .384]
+		Ellipse:
+			pos: self.center_x - s / 2, 500
+			size: s, dp(150)
+
+<CanvasExpl2>:
+	canvas:
+		Color:
+			rgb: [.3, .524, .384]
+		Line:
+			width: 3
+			points: (0, self.center_y, self.width, self.center_y)
+		Line:
+			width: 3
+			points: (self.center_x, 0, self.center_x, self.height)
