@@ -1,6 +1,6 @@
 #: set s dp(200)
 
-#CanvasExpl2:
+CanvasExpl3:
 
 <CanvasExpl1>:
 	canvas:
@@ -25,3 +25,32 @@
 		Line:
 			width: 3
 			points: (self.center_x, 0, self.center_x, self.height)
+
+<CanvasExpl3>:
+	canvas:
+		Color:
+			rgb: [.3, .424, .384]
+		Rectangle:
+			pos: 200, 500
+			size: dp(100), dp(100)
+		Color:
+			rgb: [.4, .424, .384]
+		Ellipse:
+			pos: self.center_x - s / 2, 500
+			size: s, dp(150)
+			angle_start: 0
+			angle_end: 180
+
+<CanvasExpl4>:
+	canvas:
+		Color:
+			rgb: [.3, .424, .384]
+		Rectangle:
+			pos: 200, 500
+			size: dp(100), dp(100)
+		Color:
+			rgb: [.5, .424, .384]
+		Line:
+			width: 2
+			ellipse: (400, 500, 250, 150, 0, 180)
+	

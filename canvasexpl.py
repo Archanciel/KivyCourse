@@ -7,9 +7,15 @@ class CanvasExpl1(Widget):
 class CanvasExpl2(Widget):
 	pass
 	
+class CanvasExpl3(Widget):
+	pass
+	
+class CanvasExpl4(Widget):
+	pass
+		
 class CanvasExplApp(App):
 	def build(self):
-		return CanvasExpl2()
+		return CanvasExpl4()
 		
 if __name__ == '__main__':
 	CanvasExplApp().run()
