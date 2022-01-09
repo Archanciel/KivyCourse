@@ -1,0 +1,56 @@
+<BoxLayoutExplGUI>
+	orientation: 'vertical'
+	
+	padding: 5
+	spacing: 5
+	
+	Button:
+		text: 'A'
+		size_hint: (.5, .5)
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Button:
+		text: 'B size x y'
+		size_hint_x: None
+		size_x: 280
+		#width: 280
+		size_hint_y: None
+		size_y: 230
+		#height: 230
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Button:
+		text: 'B size x y dp'
+		size_hint_x: None
+		size_x: dp(280)
+		#width: dp(280)
+		size_hint_y: None
+		size_y: 230
+		#height: 230
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Button:
+		text: 'B w/h'
+		size_hint_x: None
+		#size_x: 280
+		width: 280
+		size_hint_y: None
+		#size_y: 230
+		height: 230
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Button:
+		text: 'B w/h dp'
+		size_hint_x: None
+		#size_x: dp(280)
+		width: dp(280)
+		size_hint_y: None
+		#size_y: 230
+		height: dp(230)
+		pos_hint: {'center_x': .5}
+		on_press: root.setToLabel(self.text)
+	Label:
+		id: label_1
+		text: 'label 1'
+		size_hint: (1, 2)
+		
